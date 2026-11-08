@@ -1,0 +1,117 @@
+
+<!-- NIM: 2403010028, Nama: Dinda Dinna Nurani Aprilianti, Topik: Sistem Informasi Pengelolaan Kosan Berbasis Web -->
+
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan Bulanan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sistem Informasi Pengelolaan Kosan</h1>
+    <p>Halaman laporan keuangan bulanan kosan.</p>
+</header>
+
+<nav>
+    <h2>Menu Admin</h2>
+
+    <ul>
+        <li><a href="index.html">Halaman Utama</a></li>
+        <li><a href="tambah_kamar.html">Tambah Kamar</a></li>
+        <li><a href="data_penghuni.html">Data Penghuni</a></li>
+        <li><a href="data_pembayaran.html">Data Pembayaran</a></li>
+        <li><a href="laporan_keuangan.html" class="aktif">Laporan Keuangan Bulanan</a></li>
+        <li><a href="daftar_kamar.html">Daftar Kamar</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <h2>Laporan Keuangan Bulanan</h2>
+
+    <p>
+        Laporan ini menampilkan pemasukan dari seluruh pembayaran
+        yang telah diterima dan sisa tunggakan penghuni.
+    </p>
+
+    <p>
+        <label for="pilihBulan">Pilih Bulan Laporan:</label><br>
+        <input type="month" id="pilihBulan">
+    </p>
+
+    <h3>Ringkasan Keuangan</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Total Pemasukan</td>
+                <td id="laporanPemasukan">Rp0</td>
+            </tr>
+
+            <tr>
+                <td>Total Tunggakan</td>
+                <td id="laporanTunggakan">Rp0</td>
+            </tr>
+
+            <tr>
+                <td>Jumlah Transaksi Pembayaran</td>
+                <td id="jumlahTransaksi">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Rincian Transaksi Pembayaran</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>ID Pembayaran</th>
+                <th>ID Penghuni</th>
+                <th>Tanggal Bayar</th>
+                <th>Jumlah Diterima</th>
+                <th>Bulan Tagihan</th>
+            </tr>
+        </thead>
+
+        <tbody id="rincianLaporan"></tbody>
+    </table>
+
+    <h3>Riwayat Laporan Bulanan</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Bulan</th>
+                <th>Total Pemasukan</th>
+                <th>Total Tunggakan</th>
+            </tr>
+        </thead>
+
+        <tbody id="riwayatLaporan"></tbody>
+    </table>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sistem Informasi Pengelolaan Kosan</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

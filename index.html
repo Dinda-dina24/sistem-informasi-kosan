@@ -1,0 +1,98 @@
+<!-- NIM: 2403010028, nama: Dinda Dinna Nurani Aprilianti, topik: Sistem Informasi Pengelolaan Kosan Berbasis Web -->
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <title>Halaman Utama - Sistem Informasi Pengelolaan Kosan</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Sistem Informasi Pengelolaan Kosan</h1>
+      <p>Website untuk membantu admin mengelola data kosan.</p>
+    </header>
+
+    <nav>
+      <h2>Menu Admin</h2>
+      <ul>
+        <li><a href="index.html" class="aktif">Halaman Utama</a></li>
+        <li><a href="tambah_kamar.html">Tambah Kamar</a></li>
+        <li><a href="data_penghuni.html">Data Penghuni</a></li>
+        <li><a href="data_pembayaran.html">Data Pembayaran</a></li>
+        <li><a href="laporan_keuangan.html">Laporan Keuangan Bulanan</a></li>
+        <li><a href="daftar_kamar.html">Daftar Kamar</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="dashboard-welcome">
+        <h2>Selamat Datang, Admin!</h2>
+        <p>Selamat datang di Sistem Informasi Pengelolaan Kosan</p>
+        <p>Kelola data kamar, penghuni, dan pembayaran kosan dengan mudah</p>
+      </section>
+
+      <!-- Foto suasana kedai -->
+      <figure id="lokasi">
+        <h2>KOSAN WINATA</h2>
+
+        <img src="kosan.jpg.jpeg" alt="kosan.jpg" />
+
+        <figcaption>HALAMAN KOSAN SUTISNA</figcaption>
+      </figure>
+
+      <h2>Ringkasan Data Kosan</h2>
+
+      <section class="dashboard-cards">
+        <div class="dashboard-card">
+          <p>Total Kamar Keseluruhan</p>
+          <h3>10 Kamar</h3>
+        </div>
+
+        <div class="dashboard-card">
+          <p>Total Penghuni</p>
+          <h3>6 Orang</h3>
+        </div>
+
+        <div class="dashboard-card">
+          <p>Total Kamar Kosong</p>
+          <h3>4 Kamar</h3>
+        </div>
+
+        <div class="dashboard-card">
+          <p>Pembayaran Lunas</p>
+          <h3>4 Data</h3>
+        </div>
+
+        <div class="dashboard-card">
+          <p>Penghuni Menunggak</p>
+          <h3>2 Orang</h3>
+        </div>
+      </section>
+
+      <section class="dashboard-info">
+        <h2>Informasi Sistem</h2>
+        <p>
+          Website ini digunakan untuk membantu admin mengelola informasi kosan.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Sistem Informasi Pengelolaan Kosan</p>
+    </footer>
+
+    <!-- MODAL INFORMASI -->
+    <div id="modalInformasi" class="modal">
+      <div class="modal-content">
+        <h3>Informasi Sistem Kosan</h3>
+        <p>
+          Sistem Informasi Pengelolaan Kosan membantu admin mengelola data
+          kamar, penghuni, pembayaran, dan tunggakan kosan.
+        </p>
+        <button type="button" id="btnTutupInformasi">Tutup</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+
+<!-- NIM: 2403010028, nama: Dinda Dinna Nurani Aprilianti, topik: Sistem Informasi Pengelolaan Kosan Berbasis Web -->
+
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kamar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistem Informasi Pengelolaan Kosan</h1>
+        <p>Formulir untuk memasukkan data kamar dan penghuni kosan.</p>
+    </header>
+
+    <nav>
+        <h2>Menu Admin</h2>
+        <ul>
+            <li><a href="index.html">Halaman Utama</a></li>
+            <li><a href="tambah_kamar.html" class="aktif">Tambah Kamar</a></li>
+            <li><a href="data_penghuni.html">Data Penghuni</a></li>
+            <li><a href="data_pembayaran.html">Data Pembayaran</a></li>
+            <li><a href="laporan_keuangan.html">Laporan Keuangan Bulanan</a></li>
+            <li><a href="daftar_kamar.html">Daftar Kamar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>Formulir Tambah Kamar</h2>
+
+ 
+        <form id="formKamar">
+
+            <div class="form-group">
+                <label for="nomorKamar">Nomor Kamar:</label>
+                <input type="text" id="nomorKamar" name="nomor_kamar"
+                    placeholder="Contoh: KMR-006" required>
+            </div>
+
+            <div class="form-group">
+                <label for="idPenghuni">ID Penghuni:</label>
+                <input type="text" id="idPenghuni" name="id_penghuni"
+                    placeholder="Contoh: PH-006" required>
+            </div>
+
+            <div class="form-group">
+                <label for="namaPenghuni">Nama Penghuni:</label>
+                <input type="text" id="namaPenghuni" name="nama_penghuni"
+                    placeholder="Masukkan nama penghuni" required>
+            </div>
+
+            <div class="form-group">
+                <label for="teleponPenghuni">Nomor Telepon:</label>
+                <input type="tel" id="teleponPenghuni" name="telepon"
+                    placeholder="Contoh: 081234567890" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hargaKamar">Harga Sewa per Bulan:</label>
+                <input type="number" id="hargaKamar" name="harga"
+                    placeholder="Masukkan harga" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fasilitas">Fasilitas Kamar:</label>
+                <input type="text" id="fasilitas" name="fasilitas"
+                    placeholder="Contoh: Kasur, lemari, kipas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="statusKamar">Status Kamar:</label>
+                <select id="statusKamar" name="status" required>
+                    <option value="">Pilih Status</option>
+                    <option value="Terisi">Terisi</option>
+                    <option value="Kosong">Kosong</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Masuk:</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+
+            <div class="form-tombol">
+                <button type="submit">Simpan Data</button>
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+
+
+        <p id="pesanForm"></p>
+
+        <p>
+            <a href="daftar_kamar.html">Lihat Daftar Kamar</a>
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Pengelolaan Kosan</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

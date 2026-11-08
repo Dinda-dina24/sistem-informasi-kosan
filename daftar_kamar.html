@@ -1,0 +1,176 @@
+
+<!-- NIM: 2403010028, nama: Dinda Dinna Nurani Aprilianti, topik: Sistem Informasi Pengelolaan Kosan Berbasis Web -->
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Kamar - Pengelolaan Kosan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistem Informasi Pengelolaan Kosan</h1>
+        <p>Daftar Kamar Kos</p>
+    </header>
+
+    <nav>
+        <h2>Menu Admin</h2>
+        <ul>
+            <li><a href="index.html">Halaman Utama</a></li>
+            <li><a href="tambah_kamar.html">Tambah Kamar</a></li>
+            <li><a href="data_penghuni.html">Data Penghuni</a></li>
+            <li><a href="data_pembayaran.html">Data Pembayaran</a></li>
+            <li><a href="laporan_keuangan.html">Laporan Keuangan Bulanan</a></li>
+            <li><a href="daftar_kamar.html" class="aktif">Daftar Kamar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <h2>Daftar Kamar Kos</h2>
+
+        <p>
+            <a href="tambah_kamar.html" class="tombol">+ Tambah Kamar</a>
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nomor Kamar</th>
+                    <th>ID Penghuni</th>
+                    <th>Harga Kamar</th>
+                    <th>Fasilitas</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelKamar">
+
+                <tr>
+                    <td>1</td>
+                    <td>K001</td>
+                    <td>PH-001</td>
+                    <td>Rp700.000</td>
+                    <td>Kasur, Lemari,dll</td>
+                    <td>Terisi</td>
+                    <td>
+                        <button type="button" class="btn-ubah">Ubah</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>K002</td>
+                    <td>PH-002</td>
+                    <td>Rp700.000</td>
+                    <td>Kasur, Lemari,dll</td>
+                    <td>Terisi</td>
+                    <td>
+                        <button type="button" class="btn-ubah">Ubah</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>K003</td>
+                    <td>PH-003</td>
+                    <td>Rp700.000</td>
+                    <td>Kasur, Lemari,dll</td>
+                    <td>Terisi</td>
+                    <td>
+                        <button type="button" class="btn-ubah">Ubah</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>K004</td>
+                    <td>PH-004</td>
+                    <td>Rp700.000</td>
+                    <td>Kasur, Lemari,dll</td>
+                    <td>Terisi</td>
+                    <td>
+                        <button type="button" class="btn-ubah">Ubah</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>K005</td>
+                    <td>PH-005</td>
+                    <td>Rp700.000</td>
+                    <td>Kasur, Lemari,dll</td>
+                    <td>Terisi</td>
+                    <td>
+                        <button type="button" class="btn-ubah">Ubah</button>
+                        <button type="button" class="btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </main>
+
+    <!-- MODAL EDIT DATA KAMAR -->
+    <div id="modalUbahKamar" class="modal">
+        <div class="modal-content">
+
+            <h3>Edit Data Kamar</h3>
+
+            <form id="formUbahKamar">
+
+                <label for="editNomorKamar">Nomor Kamar</label>
+                <input type="text" id="editNomorKamar" required>
+
+                <label for="editHargaKamar">Harga Kamar</label>
+                <input type="number" id="editHargaKamar" min="1" required>
+
+                <label for="editStatusKamar">Status Kamar</label>
+                <select id="editStatusKamar" required>
+                    <option value="Kosong">Kosong</option>
+                    <option value="Terisi">Terisi</option>
+                </select>
+
+                <div class="form-button">
+                    <button type="button" id="btnBatalUbah">Batal</button>
+                    <button type="submit">Simpan Perubahan</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- MODAL HAPUS DATA KAMAR -->
+    <div id="modalHapus" class="modal">
+        <div class="modal-content">
+
+            <h3>Konfirmasi Hapus</h3>
+
+            <p>Apakah kamu yakin ingin menghapus data kamar ini?</p>
+
+            <button type="button" id="btnBatal">Batal</button>
+            <button type="button" id="btnKonfirmasiHapus">Ya, Hapus</button>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Pengelolaan Kosan</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

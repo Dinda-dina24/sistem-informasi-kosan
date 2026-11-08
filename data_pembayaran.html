@@ -1,0 +1,119 @@
+
+<!-- NIM: 2403010028
+Nama: Dinda Dinna Nurani Aprilianti
+Topik: Sistem Informasi Pengelolaan Kosan Berbasis Web -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pembayaran Kosan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sistem Informasi Pengelolaan Kosan</h1>
+    <p>Halaman untuk mengelola data pembayaran kosan.</p>
+</header>
+
+<nav>
+    <h2>Menu Admin</h2>
+    <ul>
+        <li><a href="index.html">Halaman Utama</a></li>
+        <li><a href="tambah_kamar.html">Tambah Kamar</a></li>
+        <li><a href="data_penghuni.html">Data Penghuni</a></li>
+        <li><a href="data_pembayaran.html" class="aktif">Data Pembayaran</a></li>
+        <li><a href="laporan_keuangan.html">Laporan Keuangan Bulanan</a></li>
+        <li><a href="daftar_kamar.html">Daftar Kamar</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <h2>Data Pembayaran Penghuni</h2>
+
+    <h3>Tambah Pembayaran</h3>
+
+    <form id="formPembayaran">
+
+        <p>
+            <label for="idPenghuniBayar">ID Penghuni:</label><br>
+            <input type="text" id="idPenghuniBayar"
+                   placeholder="Contoh: PH-001" required>
+        </p>
+
+        <p>
+            <label for="namaPenghuniBayar">Nama Penghuni:</label><br>
+            <input type="text" id="namaPenghuniBayar"
+                   placeholder="Masukkan nama penghuni" required>
+        </p>
+
+        <p>
+            <label for="tanggalBayar">Tanggal Bayar:</label><br>
+            <input type="date" id="tanggalBayar" required>
+        </p>
+
+        <p>
+            <label for="tagihanKosan">Total Tagihan Kos:</label><br>
+            <input type="number" id="tagihanKosan"
+                   placeholder="Contoh: 700000" min="1" required>
+        </p>
+
+        <p>
+            <label for="jumlahBayar">Jumlah Dibayar:</label><br>
+            <input type="number" id="jumlahBayar"
+                   placeholder="Contoh: 400000" min="1" required>
+        </p>
+
+        <p>
+            <label for="bulanPembayaran">Bulan Pembayaran:</label><br>
+            <input type="month" id="bulanPembayaran" required>
+        </p>
+
+        <button type="submit">Simpan Pembayaran</button>
+        <button type="reset">Batal</button>
+
+    </form>
+
+    <p id="pesanPembayaran"></p>
+
+    <h3>Daftar Pembayaran</h3>
+
+    <div class="table-responsive">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID Pembayaran</th>
+                    <th>ID Penghuni</th>
+                    <th>Nama Penghuni</th>
+                    <th>Tanggal Bayar</th>
+                    <th>Total Tagihan</th>
+                    <th>Jumlah Dibayar</th>
+                    <th>Sisa Tunggakan</th>
+                    <th>Bulan Pembayaran</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelPembayaran"></tbody>
+        </table>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sistem Informasi Pengelolaan Kosan</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
